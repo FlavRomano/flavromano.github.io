@@ -18,6 +18,8 @@ html {
 
 body {
   margin: 0;
+  color: white;
+  background-color: #000;
 }
 
 /* HTML5 display definitions
@@ -230,8 +232,11 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.1em;
+  max-width: 100%;
+  height: auto;
+  color: #00a930;
 }
 
 /* Forms
@@ -424,4 +429,9 @@ table {
 td,
 th {
   padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
