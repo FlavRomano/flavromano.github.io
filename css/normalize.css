@@ -185,8 +185,9 @@ sub {
 
 img {
   border: 0;
+  max-width: 100%;
+  height: auto;
 }
-
 /**
  * Correct overflow not hidden in IE 9/10/11.
  */
@@ -429,9 +430,4 @@ table {
 td,
 th {
   padding: 0;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
 }
