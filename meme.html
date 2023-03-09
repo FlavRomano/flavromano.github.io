@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>filthy CS student</title>
+
+    <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+    <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+
+    <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+
+<body>
+
+    <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="container">
+        <header>
+            <h4>filthy CS student. <a href="/">/home</a> <a href="/journey.html">/journey</a> <a
+                    href="/projects.html">/projects</a> <a href="/about.html">/about</a>
+            </h4>
+        </header>
+        <h5>Dorguatizer 0.0.1</h5>
+        <textarea name="" id="input" cols="70" rows="50"
+            style="color: black; display: table; margin: 0 auto;"></textarea>
+        <br>
+        <span style="display: table; margin: 0 auto;">
+            <p id="output" style="font-size: xx-large;"></p>
+        </span>
+    </div>
+</body>
+<script>
+    const input = document.getElementById("input")
+    input.addEventListener("keyup",
+        (e) => {
+            const output = document.getElementById("output")
+            output.innerHTML = dorgFoo(e.target.value)
+        })
+    console.log(input)
+    function dorgFoo(text) {
+        return text.split("").map((char) => char == "T" ? "D" : (char == "t" ? "d" :
+            (char == "C" ? "G" : (char == "c" ? "g" :
+                (char == "\n" ? "<br>" : char)))))
+            .join("");
+    }
+</script>
+
+</html>
