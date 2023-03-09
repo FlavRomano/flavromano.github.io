@@ -27,6 +27,18 @@
 
 </head>
 
+<style>
+    #copyButton:hover {
+        background-color: darkslategray
+    }
+
+    #copyButton:active {
+        background-color: darkolivegreen;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+    }
+</style>
+
 <body>
 
     <!-- Primary Page Layout
@@ -45,7 +57,7 @@
             <p id="output" style="font-size: xx-large;"></p>
         </span>
         <div style="float: right">
-            <button style="color: white" onclick="toClipboard()">Copy</button>
+            <button id="copyButton" style="color: white" onclick="toClipboard()">Copy</button>
         </div>
     </div>
 </body>
