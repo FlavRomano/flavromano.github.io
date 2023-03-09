@@ -44,9 +44,17 @@
         <span style="display: table; margin: 0 auto;">
             <p id="output" style="font-size: xx-large;"></p>
         </span>
+        <div style="float: right">
+            <button style="color: white" onclick="toClipboard()">Copy</button>
+        </div>
     </div>
 </body>
 <script>
+    function toClipboard() {
+        var copyText = document.getElementById("input");
+        navigator.clipboard.writeText(dorgFoo(copyText.value));
+    }
+
     textarea = document.querySelector("#input");
     textarea.addEventListener('input', autoResize, false);
 
