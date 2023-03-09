@@ -75,18 +75,18 @@
         this.style.height = this.scrollHeight + 'px';
     }
 
-
     const input = document.getElementById("input")
     input.addEventListener("keyup",
         (e) => {
             const output = document.getElementById("output")
             output.innerHTML = dorgFoo(e.target.value)
         })
-    console.log(input)
+
+
     function dorgFoo(text) {
         return text.split("").map((char) => char == "T" ? "D" : (char == "t" ? "d" :
-            (char == "C" ? "G" : (char == "c" ? "g" :
-                (char == "\n" ? "<br>" : char)))))
+            (char == "C" || char == "Q" ? "G" : (char == "c" || char == "q") ? "g" :
+                (char == "\n" ? "<br>" : char))))
             .join("");
     }
 </script>
