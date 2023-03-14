@@ -92,7 +92,8 @@
 
     function dorgFooCopy(text) {
         return text.split("").map((char) => char == "T" ? "D" : (char == "t" ? "d" :
-            (char == "C" || char == "Q" ? "G" : (char == "c" || char == "q") ? "g" : char)))
+            (char == "C" || char == "Q" ? "G" : (char == "c" || char == "q") ? "g" :
+                (char == "\n" ? " " : char))))
             .join("");
     }
 </script>
