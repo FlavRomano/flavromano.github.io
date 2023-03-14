@@ -64,7 +64,7 @@
 <script>
     function toClipboard() {
         var copyText = document.getElementById("input");
-        navigator.clipboard.writeText(dorgFoo(copyText.value));
+        navigator.clipboard.writeText(dorgFooCopy(copyText.value));
     }
 
     textarea = document.querySelector("#input");
@@ -87,6 +87,12 @@
         return text.split("").map((char) => char == "T" ? "D" : (char == "t" ? "d" :
             (char == "C" || char == "Q" ? "G" : (char == "c" || char == "q") ? "g" :
                 (char == "\n" ? "<br>" : char))))
+            .join("");
+    }
+
+    function dorgFooCopy(text) {
+        return text.split("").map((char) => char == "T" ? "D" : (char == "t" ? "d" :
+            (char == "C" || char == "Q" ? "G" : (char == "c" || char == "q") ? "g" : char)))
             .join("");
     }
 </script>
